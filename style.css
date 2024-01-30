@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+.container{
+    max-width: 1320px;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --black : rgb(00,00,00);
+    --white : rgb(255,255,255);
+}
+/* ------------ Layout ------------ */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav.nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* background-color: rgb(54, 54, 54); */
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    padding-right: 0;
+    justify-content: space-between;
+    box-shadow: 0px 4px 20px 5px rgb(182, 231, 169);
+
+}
+.logo img{
+    width:6rem;
+}
+.options,.login{
+    list-style: none;
+}
+.options li,.login li{  
+    margin: 0 1rem;
+    padding: 1rem;
+}
+.options li a,.login li a{
+    font-size: 2rem;
+}
+.modes img{
+    margin-left: 1rem;
+    width: 3rem;
+}
+.options li a,.login li a{
+    /* color: var(--white); */
+    color: var(--black);
+    text-decoration: none;
+}
+.options li,.login li{
+    padding-right: 1rem;
+    margin: .3rem .3rem ;
+}
+.login-li{
+    /* color: white; */
+    color: rgb(14, 13, 13);
+    border: 2px solid white;
+    border-radius: 1rem;
+    /* padding: 10px; */
+}
+.options li:hover,.login li:hover{
+    color: green;
+    scale: 1.1;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid green ;
+    transition: all 300ms ;
+}
+
+#location{
+    color: rgb(28, 252, 28);
+    /* padding: 20px; */
+    font-size: 1.7rem;
+    padding-right: 2rem;
+}
+#location i{
+    padding-right: 5px;
+}
+.bars i{
+    font-size: 3rem;
+    
+}
+
+
+
+
+#check{
+    display: none;
+}
+.bars{
+    display: none;
+    position: relative;
+    right: 2rem;
+    top: 2rem;
+}
+.cancel{
+    display: none;
+    padding: 1rem 0px 1rem 2rem;
+}
+marquee{
+    position: relative;
+    bottom: 0;
+}
+marquee img{
+    width: 12rem;
+}
+
+
+/* ---------------- Hero Section ----------*/
+.hero{
+    /* width: 100%; */
+    /* height: calc(100vh - 10rem); */
+    height: 100vh;
+    z-index: -1;
+
+}
+.carousel{
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+}
+.img-1{
+    background: url("./Assets/sw-2.avif");  
+    
+}
+.solid-waste h2{
+    color:chocolate;
+    margin-bottom: 4.8rem;
+}
+.hazardous-waste h2{
+    color:rgb(236, 221, 11);
+    margin-bottom: 4.8rem;
+}
+.solid-waste h5{
+    color: rgb(253, 229, 206);
+    text-align: center;
+}
+.hazardous-waste h5{
+    color: rgb(255, 251, 211);
+    text-align: center;
+}
+.img-inner{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.img-2{
+    background: url("./Assets/HW-2.webp");   
+}
+.img-3{
+    background: url("./Assets/BW-1.jpg");   
+}
+.img-4{
+    background: url("https://media.istockphoto.com/id/1218184452/video/all-efforts-for-a-new-world.jpg?s=640x640&k=20&c=35LnrX1pHJQcGmSnydt2hr2KKk0C9QDrMp4W7f39234=");   
+}
+.img-carousel{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    /* opacity: .8;  */
+    scroll-snap-align: start;
+}
+.img-content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    place-items: center;
+    color: white;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.img-content a i{
+    color:white;
+    font-size: 4rem;
+}
+.nav-bar{
+    padding-right: 3.2rem;
+}
+
+/* ----------------------- FAQ Section Start ---------------------------- */
+
+.faq :is(label,input,div){
+    margin-left:2.4rem;
+}
+.section-faq{
+    padding-top: 6.4rem;
+}
+.faq{
+    font-size: 2.5rem;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-bottom: .6rem;
+    padding-bottom: 1.2rem;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center; */
+}
+.faq label{
+    width: calc(100% - 7rem);
+    padding: 1.2rem 0;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+}
+.faq input{
+    position: relative;    
+    height: 100%;
+    width: 0;
+    /* border-bottom: 2px solid rgb(0, 0, 0); */
+
+
+}
+.faq input::after{
+    content: '+';
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+.faq input:checked::after{
+    content: '-';
+}
+.faq-content{
+    padding: 1.2rem 2.4rem;
+    padding-bottom: 0rem;
+    height: 0;
+    overflow: hidden;
+    color: rgb(28, 29, 28);
+    border-top: 2px solid rgb(0, 0, 0);
+}
+.faq input:checked ~ .faq-content{
+    height: 100%;
+}
+.faq-heading{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4.8rem;
+    margin-top: 2.4rem;
+}
+.chatbot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ----------------------- FAQ Section End ---------------------------- */
+
+
+
+
+@media only screen and (max-width:720px){
+    .nav{
+        max-height: 130px;
+        align-items: flex-start;
+        padding-right: 0;
+        position: sticky;
+        top: 0;
+    }
+    .bars{
+        display: block;
+    }
+
+    .nav-bar{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        height: 0;
+        z-index: -1;
+        align-items: flex-start;
+    }
+    #check:checked ~ .nav-bar{
+        display: flex;
+        z-index: 100;
+        background-color: rgb(252, 252, 252);
+        min-height: 100vh;
+        padding: 1rem;
+        /* overflow: scroll; */
+        /* position: absolute; */
+        /* top: 0; */
+    }
+    .options,.login{
+        width: 80%;
+        flex-direction: column;
+    }
+    .options li,.login li{
+        float: none;
+        width: 80%;
+        padding: 10px;
+        height: 60px;
+
+    }
+    .options li a,.login li a{
+        /* align-items: center; */
+        min-width: 100%;
+    }
+
+    #check:checked ~ .bars{
+        display: none;
+    }
+    #check:checked ~ .nav-bar .cancel{
+        display: block;
+    }
+    .options li:hover,.login li:hover{
+        color: green;
+        scale: 1;
+        padding: 10px;
+        border-radius: 4px;
+        border: 2px solid green ;
+        transition: all 300ms ;
+    }
+    .img-inner{
+        width: 90%;
+    }
+}
+@media (max-width:480px){
+    .msw-details h1,
+    .faq-heading{
+        font-size: 2rem;
+    }
+    .faq label,.faq-content{
+        font-size: 1.8rem;
+    }
+    .container{
+        padding: 1.2rem;
+    }
+    .img-inner{
+        width: 100%;
+    }
+    .img-inner h2{
+        font-size:3rem;
+    }
+    .img-inner h5{
+        font-size:2rem;
+    }
+    .img-content{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 60px 1fr 60px;
+    }
+    .img-content a i{
+        padding-left: 1rem;
+        font-size: 3rem;
+    }
+}
