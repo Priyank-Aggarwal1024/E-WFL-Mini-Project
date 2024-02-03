@@ -257,6 +257,7 @@ marquee img{
 }
 .faq input:checked ~ .faq-content{
     height: 100%;
+    font-size: 2rem;
 }
 .faq-heading{
     font-size: 3rem;
@@ -298,7 +299,7 @@ marquee img{
     #check:checked ~ .nav-bar{
         display: flex;
         z-index: 100;
-        background-color: rgb(252, 252, 252);
+        background-color: rgb(255, 255, 255);
         min-height: 100vh;
         padding: 1rem;
         /* overflow: scroll; */
