@@ -33,7 +33,7 @@
     align-items: center;   
     justify-content: center;
     gap: 3rem; 
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(180, 247, 180, 0.6);
 }
 .waste-content a{
     display: block;
@@ -64,31 +64,31 @@
 
 }
 .waste-1{
-    background-image: url("./wasteImages/w-1.jpg");
+    background-image: url("./wasteImages/w-1.jpeg");
 
 }
 .waste-2{
-    background-image: url("./wasteImages/w-2.avif");
+    background-image: url("./wasteImages/w-2.jpeg");
 
 }
 .waste-3{
-    background-image: url("./wasteImages/w-3.jpg");
+    background-image: url("./wasteImages/w-3.jpeg");
 
 }
 .waste-4{
-    background-image: url("./wasteImages/w-4.webp");
+    background-image: url("./wasteImages/w-4.png");
 
 }
 .waste-5{
-    background-image: url("./wasteImages/w-5.webp");
+    background-image: url("./wasteImages/w-5.png");
 
 }
 .waste-6{
-    background-image: url("./wasteImages/w-6.jpg");
+    background-image: url("./wasteImages/w-6.png");
 
 }
 .waste-7{
-    background-image: url("./wasteImages/w-7.jpg");
+    background-image: url("./wasteImages/w-7.webp");
 
 }
 .waste-8{
@@ -96,11 +96,11 @@
 
 }
 .waste-9{
-    background-image: url("./wasteImages/w-9.jpg");
+    background-image: url("./wasteImages/w-9.avif");
 
 }
 .waste-10{
-    background-image: url("./wasteImages/w-10.jpg");
+    background-image: url("./wasteImages/w-10.jpeg");
 
 }
 .waste-11{
@@ -108,6 +108,6 @@
 
 }
 .waste-12{
-    background-image: url("./wasteImages/w-12.webp");
+    background-image: url("./wasteImages/w-12.png");
 
 }
