@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="waste.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,20 +13,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="icon" href="./Assets/Copy of E (1).png" />
     <title>Location</title>
     <style>
+      html {
+        min-height: 100vh;
+      }
       .location-show {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         /* height: calc(100); */
+        padding: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 8fr;
         width: 100%;
+        min-height: calc(100vh - 102px);
+        align-items: center;
       }
-      .location-show h2 {
+      .location-show h1 {
         color: green;
         font-size: 3rem;
+        text-align: center;
+      }
+      .input {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem 0;
+      }
+      .inp-location#inp-location {
+        width: 50%;
+        padding: 0.5rem;
+        font-size: 2rem;
+        color: #000000;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      .btn-loc {
+        width: 30%;
+        padding: 0.5rem;
+        font-size: 2.5rem;
+        background-color: rgb(49, 255, 49);
+        border-radius: 2px;
+        outline: none;
+        border: none;
+      }
+      @media (width<680px) {
+        .inp-location#inp-location,
+        .btn-loc {
+          font-size: 1.8rem;
+        }
+      }
+      @media (width<480px) {
+        .inp-location#inp-location,
+        .btn-loc {
+          font-size: 1.8rem;
+          width: 48%;
+        }
       }
     </style>
   </head>
@@ -70,22 +119,184 @@
       <div class="input">
         <input
           type="text"
-          class="location"
-          id="location"
+          class="inp-location"
+          id="inp-location"
           placeholder="Enter Location"
         />
-        <button class="btn">Show Location</button>
+        <button class="btn-loc" onclick="getLocation()">Show Location</button>
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d56028.6024738517!2d77.40236102253387!3d28.636125636923904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20waste%20facility%20locations!5e0!3m2!1sen!2sin!4v1706775613412!5m2!1sen!2sin"
-        width="1200px"
-        height="600px"
-        style="border: 0"
+        width="90%"
+        height="90%"
+        style="border: 0; margin: auto"
         allowfullscreen=""
         loading="lazy"
+        id="iframe"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-    <script></script>
+    <section class="section-faq container" id="section-faq">
+      <h1 class="faq-heading">Frequently Asked Questions</h1>
+      <div class="faq-1 faq">
+        <label for="label-faq--1"
+          >What is the most important in waste management?</label
+        >
+        <input type="checkbox" name="faq" id="label-faq--1" />
+        <div class="faq-content">
+          <p>
+            IDEM encourages the 3Rs of waste – Reduce, Reuse and Recycle. Reduce
+            the amount of waste we make to a feasible extent by using resources
+            wisely and using less than usual. For example, packaging. Reducing
+            waste will not only protect the environment but will also save on
+            costs or reduce expenses for disposal.
+          </p>
+        </div>
+      </div>
+      <div class="faq-2 faq">
+        <label for="label-faq--2">What is the main waste management?</label>
+        <input type="checkbox" name="faq" id="label-faq--2" />
+        <div class="faq-content">
+          <p>
+            Possible waste disposal methods are recycling, composting,
+            incineration, landfills, bioremediation, waste to energy, and waste
+            minimization. As for waste management, it is the measures utilized
+            to manage waste in its entire life cycle, from waste generation to
+            disposal or recovery.
+          </p>
+        </div>
+      </div>
+      <div class="faq-3 faq">
+        <label for="label-faq--3">What is the concept of waste?</label>
+        <input type="checkbox" name="faq" id="label-faq--3" />
+        <div class="faq-content">
+          <p>
+            Waste (or wastes) are unwanted or unusable materials. Waste is any
+            substance discarded after primary use, or is worthless, defective
+            and of no use.
+          </p>
+        </div>
+      </div>
+      <div class="faq-4 faq">
+        <label for="label-faq--4">What is zero waste lifestyle?</label>
+        <input type="checkbox" name="faq" id="label-faq--4" />
+        <div class="faq-content">
+          <p>
+            The zero waste approach seeks to maximize recycling, minimize waste,
+            reduce consumption and ensures that products are made to be reused,
+            repaired or recycled back into nature or the marketplace.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="./Assets/Copy of E (1).png" alt="WFL Logo" />
+
+        <p class="footer-links">
+          <a href="./index.html" class="link-1">Home</a>
+
+          <a href="./services.html">Services</a>
+
+          <a href="./education.html">Awareness</a>
+
+          <a href="#section-faq">FAQ</a>
+
+          <a href="./contact.html">Contact</a>
+
+          <a href="./location.html">Location</a>
+          <a href="./login.html">Login</a>
+        </p>
+
+        <p class="footer-company-name">Waste Facility Locator © 2024</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p><span>19th KM Stone, </span> NH-09 GHAZIABAD(U.P)</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@wfl.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Our Company developed a waste facilty locator website is a valuable
+          tool to facilitate waste management.
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const iframe = document.getElementById("iframe");
+      const inp = document.getElementById("inp-location");
+      console.log(inp);
+
+      let lat, long;
+      function getLocation() {
+        navigator.geolocation.getCurrentPosition((loc) => {
+          lat = loc.coords.latitude;
+          long = loc.coords.longitude;
+          console.log("Latitude ", lat);
+          console.log("Longitude ", long);
+
+          showNotification();
+          setInterval(() => {
+            if (inp.value == "")
+              window.location.href = `https://www.google.com/maps/search/near+waste+facility+locator/@${lat},${long}/entry=ttu`;
+            else {
+              console.log(inp.value);
+              window.location.href = `https://www.google.com/maps/search/near+${inp.value}+waste+facility+locator/@${lat},${long}/entry=ttu`;
+              inp.value = "";
+            }
+          }, 0);
+        });
+      }
+      function showNotification() {
+        //  Show the Push Notification
+        if (Notification.permission === "granted") {
+          // navigator.geolocation.getCurrentPosition(data=>{
+          //   console.log(data);
+          // })
+          console.log("Notification Granted");
+          const notification = new Notification("Location", {
+            body: "You are redirect to Maps",
+            icon: "./Assets/Copy of E (1).png",
+          });
+          notification.onclick = () => {
+            alert("Notification Clicked");
+            window.location.href = "./index.html";
+          };
+        } else {
+          requestPermission();
+        }
+      }
+      function requestPermission() {
+        //  Web Notification api inside (built in) JavaScript
+        Notification.requestPermission().then((permission) => {
+          if (permission === "granted") {
+            console.log("Notification Permission Granted");
+          } else {
+            console.log("Notification Permission Denied");
+          }
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,76 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="waste.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./Assets/Copy of E (1).png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="waste.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./Assets/Copy of E (1).png" />
     <title>Contact us</title>
     <style>
-        
+      .contact {
+        padding: 130px 0;
+      }
+
+      .contact .heading h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact .heading h2 span {
+        color: #4bfc15;
+      }
+
+      .contact .heading p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #999999;
+        margin: 20px 0 60px;
+        padding: 0;
+      }
+
+      .contact .form-control {
+        padding: 25px;
+        font-size: 13px;
+        margin-bottom: 10px;
+        background: #c4c3c3;
+        border: 0;
+        border-radius: 10px;
+      }
+
+      .contact button.btn {
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        background: #4bfc15;
+        color: #ffffff;
+      }
+
+      .contact .title h3 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .contact .title p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #999;
+        line-height: 1.6;
+        margin: 0 0 40px;
+      }
+
+      .contact .content .info {
+        margin-top: 30px;
+      }
+      .contact .content .info i {
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+        color: #02434b;
+        margin-right: 20px;
+        text-align: center;
+        width: 20px;
+      }
+      .contact .content .info h4 {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .contact .content .info h4 span {
+        font-size: 13px;
+        font-weight: 300;
+        color: #999999;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav flex">
-        <div class="logo">
-            <img src="./Assets/Copy of E (1).png" alt="">
-        </div>
-        <input type="checkbox" id="check">
-        <label for="check" class="bars">
-            <i class="fa-solid fa-bars" style="color: #000000;"></i>
-        </label>
-        <div class="nav-bar flex">
-            <label for="check" class="cancel"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 2rem;"></i></label>
+      <div class="logo">
+        <img src="./Assets/Copy of E (1).png" alt="" />
+      </div>
+      <input type="checkbox" id="check" />
+      <label for="check" class="bars">
+        <i class="fa-solid fa-bars" style="color: #000000"></i>
+      </label>
+      <div class="nav-bar flex">
+        <label for="check" class="cancel"
+          ><i
+            class="fa-solid fa-xmark"
+            style="color: #000000; font-size: 2rem"
+          ></i
+        ></label>
         <ul class="options flex">
-            <li class="nav-item flex"><a href="./index.html">Home</a></li>
-            <li class="nav-item flex"><a href="./services.html">Services</a></li>
-            <li class="nav-item flex"><a href="./education.html">Education</a></li>
-            <li class="nav-item flex"><a href="#section-faq">FAQ</a></li>
-            <li class="nav-item flex"><a href="./contact.html">Contact</a></li>
+          <li class="nav-item flex"><a href="./index.html">Home</a></li>
+          <li class="nav-item flex"><a href="./services.html">Services</a></li>
+          <li class="nav-item flex">
+            <a href="./education.html">Education</a>
+          </li>
+          <li class="nav-item flex"><a href="#section-faq">FAQ</a></li>
+          <li class="nav-item flex"><a href="./contact.html">Contact</a></li>
         </ul>
         <ul class="login flex">
-            <li id="location">
-                <a href="./location.html">
-                    <i class="fa-solid fa-location-dot" style="color: #1cfc1c;"></i>
-                    <span>Location</span>
-                </a>
-            </li>
-            <li id="login" class="login-li"><a href="./login.html">Login</a></li>
+          <li id="location">
+            <a href="./location.html">
+              <i class="fa-solid fa-location-dot" style="color: #1cfc1c"></i>
+              <span>Location</span>
+            </a>
+          </li>
+          <li id="login" class="login-li"><a href="./login.html">Login</a></li>
         </ul>
-    </div>
-    </nav>      
-            <section class="section-faq container" id="section-faq">
-                <h1 class="faq-heading">Frequently Asked Questions</h1>
-                    <div class="faq-1 faq">
-                        <label for="label-faq--1"> What is waste management?</label>
-                        <input type="checkbox" name="faq" id="label-faq--1">
-                        <div class="faq-content">
-                            <p>Waste management involves the collection, transportation, processing, recycling, and disposal of waste materials. It aims to reduce the environmental impact of waste and promote sustainable practices.</p>
-                        </div>
-                    </div>
-                    <div class="faq-2 faq">
-                        <label for="label-faq--2"> How much municipal solid waste is generated in India?</label>
-                        <input type="checkbox" name="faq" id="label-faq--2">
-                        <div class="faq-content">
-                            <p>According to a report by The Energy and Resources Institute (TERI), India generates over 62 million tons (MT) of waste in a year. Only 43 MT of total waste generated gets collected, with 12 MT being treated before disposal, and the remaining 31 MT simply discarded in wasteyards</p>
-                        </div>
-                    </div>
-                    <div class="faq-3 faq">
-                        <label for="label-faq--3"> What is waste management?</label>
-                        <input type="checkbox" name="faq" id="label-faq--3">
-                        <div class="faq-content">
-                            <p>Waste management involves the collection, transportation, processing, recycling, and disposal of waste materials. It aims to reduce the environmental impact of waste and promote sustainable practices.</p>
-                        </div>
-                    </div>
-                    <div class="faq-4 faq">
-                        <label for="label-faq--4"> What is waste management?</label>
-                        <input type="checkbox" name="faq" id="label-faq--4">
-                        <div class="faq-content">
-                            <p>Waste management involves the collection, transportation, processing, recycling, and disposal of waste materials. It aims to reduce the environmental impact of waste and promote sustainable practices.</p>
-                        </div>
-                    </div>
-            </section>
-</body>
+      </div>
+    </nav>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="heading text-center">
+          <h2>Contact <span> Us </span></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor <br />incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title">
+              <h3>Contact detail</h3>
+              <p>For further queries please fill this form and send now.</p>
+            </div>
+            <div class="content">
+              <!-- Info-1 -->
+              <div class="info">
+                <i class="fas fa-mobile-alt"></i>
+                <h4 class="d-inline-block">
+                  PHONE :
+                  <br />
+                  <span>+1.555.555.5555</span>
+                </h4>
+              </div>
+              <!-- Info-2 -->
+              <div class="info">
+                <i class="far fa-envelope"></i>
+                <h4 class="d-inline-block">
+                  EMAIL :
+                  <br />
+                  <span>support@wfl.com</span>
+                </h4>
+              </div>
+              <!-- Info-3 -->
+              <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4 class="d-inline-block">
+                  ADDRESS :<br />
+                  <span
+                    ><p>
+                      <span>19th KM Stone, </span> NH-09 GHAZIABAD(U.P)
+                    </p></span
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <form method="POST" action="https://formspree.io/f/xvoearqr">
+              <div class="row">
+                <div class="col-sm-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    name="Username"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    name="Email"
+                  />
+                </div>
+                <div class="col-sm-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Subject"
+                    name="Subject"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="comment"
+                  placeholder="Message"
+                  name="Queries"
+                ></textarea>
+              </div>
+              <button class="btn btn-block" type="submit">Send Now!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-faq container" id="section-faq">
+      <h1 class="faq-heading">Frequently Asked Questions</h1>
+      <div class="faq-1 faq">
+        <label for="label-faq--1"> What is waste management?</label>
+        <input type="checkbox" name="faq" id="label-faq--1" />
+        <div class="faq-content">
+          <p>
+            Waste management involves the collection, transportation,
+            processing, recycling, and disposal of waste materials. It aims to
+            reduce the environmental impact of waste and promote sustainable
+            practices.
+          </p>
+        </div>
+      </div>
+      <div class="faq-2 faq">
+        <label for="label-faq--2">
+          How much municipal solid waste is generated in India?</label
+        >
+        <input type="checkbox" name="faq" id="label-faq--2" />
+        <div class="faq-content">
+          <p>
+            According to a report by The Energy and Resources Institute (TERI),
+            India generates over 62 million tons (MT) of waste in a year. Only
+            43 MT of total waste generated gets collected, with 12 MT being
+            treated before disposal, and the remaining 31 MT simply discarded in
+            wasteyards
+          </p>
+        </div>
+      </div>
+      <div class="faq-3 faq">
+        <label for="label-faq--3"> What is waste management?</label>
+        <input type="checkbox" name="faq" id="label-faq--3" />
+        <div class="faq-content">
+          <p>
+            Waste management involves the collection, transportation,
+            processing, recycling, and disposal of waste materials. It aims to
+            reduce the environmental impact of waste and promote sustainable
+            practices.
+          </p>
+        </div>
+      </div>
+      <div class="faq-4 faq">
+        <label for="label-faq--4"> What is waste management?</label>
+        <input type="checkbox" name="faq" id="label-faq--4" />
+        <div class="faq-content">
+          <p>
+            Waste management involves the collection, transportation,
+            processing, recycling, and disposal of waste materials. It aims to
+            reduce the environmental impact of waste and promote sustainable
+            practices.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="./Assets/Copy of E (1).png" alt="WFL Logo" />
+
+        <p class="footer-links">
+          <a href="./index.html" class="link-1">Home</a>
+
+          <a href="./services.html">Services</a>
+
+          <a href="./education.html">Awareness</a>
+
+          <a href="#section-faq">FAQ</a>
+
+          <a href="./contact.html">Contact</a>
+
+          <a href="./location.html">Location</a>
+          <a href="./login.html">Login</a>
+        </p>
+
+        <p class="footer-company-name">Waste Facility Locator © 2024</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p><span>19th KM Stone, </span> NH-09 GHAZIABAD(U.P)</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@wfl.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Our Company developed a waste facilty locator website is a valuable
+          tool to facilitate waste management.
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
