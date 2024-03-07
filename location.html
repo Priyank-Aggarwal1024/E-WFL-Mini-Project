@@ -123,7 +123,9 @@
           id="inp-location"
           placeholder="Enter Location"
         />
-        <button class="btn-loc" onclick="getLocation()">Show Location</button>
+        <button class="btn-loc" type="submit" onclick="getLocation()">
+          Show Location
+        </button>
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d56028.6024738517!2d77.40236102253387!3d28.636125636923904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20waste%20facility%20locations!5e0!3m2!1sen!2sin!4v1706775613412!5m2!1sen!2sin"
@@ -257,15 +259,15 @@
           console.log("Longitude ", long);
 
           showNotification();
-          setInterval(() => {
-            if (inp.value == "")
-              window.location.href = `https://www.google.com/maps/search/near+waste+facility+locator/@${lat},${long}/entry=ttu`;
-            else {
-              console.log(inp.value);
-              window.location.href = `https://www.google.com/maps/search/near+${inp.value}+waste+facility+locator/@${lat},${long}/entry=ttu`;
-              inp.value = "";
-            }
-          }, 0);
+          if (inp.value === "")
+            window.location.href = `https://www.google.com/maps/search/near+waste+facility+locator/@${lat},${long}/entry=ttu`;
+          else {
+            console.log(inp.value);
+            let locate = inp.value;
+            let url = `https://www.google.com/maps/search/near+${locate}+waste+facility+locator/entry=ttu`;
+            window.location.href = `https://www.google.com/maps/search/near+${locate}+waste+facility+locator/@${lat},${long}/entry=ttu`;
+            inp.value = "";
+          }
         });
       }
       function showNotification() {
@@ -285,6 +287,7 @@
           };
         } else {
           requestPermission();
+          showNotification();
         }
       }
       function requestPermission() {
